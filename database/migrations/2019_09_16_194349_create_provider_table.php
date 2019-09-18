@@ -13,7 +13,23 @@ class CreateProviderTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('provider', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('Lastname');
+            $table->string('Phone');
+            $table->string('page');
+            $table->string('email')->unique();
+            $table->string('extension');
+            $table->string('zipcode');
+            $table->bigInteger('id_state');
+            $table->string('notification');
+            $table->bigInteger('id_currency');
+            $table->rememberToken();
+            $table->timestamps();
+
+           
+        });
     }
 
     /**

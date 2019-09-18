@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCurrencyTable extends Migration
+class Createbill_detailTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateCurrencyTable extends Migration
      */
     public function up()
     {
-        Schema::create('currency', function (Blueprint $table) {
+        Schema::create('bill_detail', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('currency');
-            $table->string('acronym');
-            $table->bigInteger('id_state');
+            $table->bigInteger('id_article');
+            $table->bigInteger('quantity');
+            $table->bigInteger('id_bill');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -13,7 +13,21 @@ class CreateBillTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('bill', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('bill_number');
+            $table->bigInteger('id_user');
+            $table->bigInteger('id_tipepayment');
+            $table->date('billing_date');
+            $table->double('total_billing', 15, 8);
+            $table->double('id_tax', 15, 8);
+            $table->bigInteger('id_state');
+            $table->rememberToken();
+            $table->timestamps();
+
+           
+        });
     }
 
     /**

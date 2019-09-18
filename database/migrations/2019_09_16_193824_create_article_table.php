@@ -13,7 +13,22 @@ class CreateArticleTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('Article', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('description');
+            $table->string('image');
+            $table->double('cost', 15, 8);
+            $table->double('sale', 15, 8);
+            $table->bigInteger('quantity');
+            $table->bigInteger('id_provider');
+            $table->bigInteger('id_category');
+            $table->date('date_input');
+            $table->rememberToken();
+            $table->timestamps();
+
+           
+        });
     }
 
     /**

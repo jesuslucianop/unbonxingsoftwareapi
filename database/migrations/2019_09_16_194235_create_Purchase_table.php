@@ -13,7 +13,19 @@ class CreatePurchaseTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('purcharse', function (Blueprint $table) {
+            $table->increments('id');
+            $table->bigInteger('id_article');
+            $table->date('date_input');
+            $table->bigInteger('id_state');
+            $table->bigInteger('id_user');
+            $table->string('mount');
+            $table->bigInteger('id_tax');
+            $table->rememberToken();
+            $table->timestamps();
+
+           
+        });
     }
 
     /**

@@ -13,7 +13,19 @@ class CreateReturnTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('return', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('lastname');
+            $table->string('adress');
+            $table->string('email')->unique();
+            $table->string('Phone');
+            $table->bigInteger('client_code');
+            $table->bigInteger('id_estatus');
+            $table->bigInteger('notification');
+            $table->rememberToken();
+            $table->timestamps();
+        });
     }
 
     /**
