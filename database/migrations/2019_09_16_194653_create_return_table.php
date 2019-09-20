@@ -19,7 +19,7 @@ class CreateReturnTable extends Migration
             $table->string('lastname');
             $table->string('adress');
             $table->string('email')->unique();
-            $table->string('Phone');
+            $table->string('phone');
             $table->bigInteger('client_code');
             $table->bigInteger('id_estatus');
             $table->bigInteger('notification');
