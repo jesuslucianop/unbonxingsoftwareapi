@@ -17,11 +17,11 @@ class CreateClientTable extends Migration
             $table->increments('id');
             $table->string('firstname');
             $table->string('lastname');
-            $table->string('adress');
+            $table->string('address');
             $table->string('email')->unique();
             $table->string('phone');
-            $table->bigInteger('client_code');
-            $table->bigInteger('id_estatus');
+            $table->bigInteger('code_client');
+            $table->bigInteger('id_status');
             $table->bigInteger('notification');
             $table->rememberToken();
             $table->timestamps();

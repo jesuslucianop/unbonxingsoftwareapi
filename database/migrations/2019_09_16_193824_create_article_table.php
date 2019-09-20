@@ -23,7 +23,7 @@ class CreateArticleTable extends Migration
             $table->bigInteger('quantity');
             $table->bigInteger('id_provider');
             $table->bigInteger('id_category');
-            $table->date('date_input');
+            $table->date('create_at');
             $table->rememberToken();
             $table->timestamps();
 

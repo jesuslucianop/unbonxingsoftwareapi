@@ -16,8 +16,8 @@ class CreateDepartmentTable extends Migration
         Schema::create('departament', function (Blueprint $table) {
             $table->increments('id');
             $table->string('departament');
-            $table->bigInteger('code_departmanet');
-            $table->bigInteger('id_state');
+            $table->bigInteger('code_deparment');
+            $table->bigInteger('id_status');
             $table->rememberToken();
             $table->timestamps();
 

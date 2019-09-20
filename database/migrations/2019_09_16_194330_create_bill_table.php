@@ -16,13 +16,13 @@ class CreateBillTable extends Migration
         Schema::create('bill', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('bill_number');
+            $table->string('billing_number');
             $table->bigInteger('id_user');
-            $table->bigInteger('id_tipepayment');
+            $table->bigInteger('id_type_payment');
             $table->date('billing_date');
             $table->double('total_billing', 15, 8);
             $table->double('id_tax', 15, 8);
-            $table->bigInteger('id_state');
+            $table->bigInteger('id_status');
             $table->rememberToken();
             $table->timestamps();
 

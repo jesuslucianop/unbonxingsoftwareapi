@@ -17,7 +17,7 @@ class CreateProviderTable extends Migration
             $table->increments('id');
             $table->string('firstname');
             $table->string('lastname');
-            $table->string('Phone');
+            $table->string('phone');
             $table->string('page');
             $table->string('email')->unique();
             $table->string('extension');

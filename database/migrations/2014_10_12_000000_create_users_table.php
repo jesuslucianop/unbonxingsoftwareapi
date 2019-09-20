@@ -23,9 +23,9 @@ class CreateUsersTable extends Migration
             $table->text('address');
             $table->string('phone');
             $table->string('identification_card');
-            $table->bigInteger('employee_Code');
+            $table->bigInteger('code_employee');
             $table->unsignedInteger('id_rol');
-            $table->bigInteger('id_estatus');
+            $table->bigInteger('id_status');
             $table->date('create_at');
             $table->bigInteger('create_user');
             $table->date('edit_at');

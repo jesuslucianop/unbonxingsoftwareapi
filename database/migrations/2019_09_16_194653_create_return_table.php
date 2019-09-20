@@ -15,14 +15,12 @@ class CreateReturnTable extends Migration
     {
         Schema::create('return', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('lastname');
-            $table->string('adress');
-            $table->string('email')->unique();
-            $table->string('phone');
-            $table->bigInteger('client_code');
-            $table->bigInteger('id_estatus');
-            $table->bigInteger('notification');
+            $table->string('return_type');
+            $table->bigInteger('id_article');
+          
+            $table->string('reason');
+            $table->date('date_Return');
+            $table->bigInteger('id_status');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -17,7 +17,7 @@ class CreatePaymentMethodTable extends Migration
             $table->increments('id');
             $table->string('type');
             $table->string('description');
-            $table->bigInteger('id_state');
+            $table->bigInteger('id_status');
             $table->rememberToken();
             $table->timestamps();
         });
