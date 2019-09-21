@@ -13,7 +13,14 @@ class CreatePaymentMethodTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('PaymentMethod', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('type');
+            $table->string('description');
+            $table->bigInteger('id_status');
+            $table->rememberToken();
+            $table->timestamps();
+        });
     }
 
     /**

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBillTable extends Migration
+class Createbill_detailTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,13 @@ class CreateBillTable extends Migration
      */
     public function up()
     {
-        Schema::create('bill', function (Blueprint $table) {
+        Schema::create('bill_detail', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('billing_number');
-            $table->bigInteger('id_user');
-            $table->bigInteger('id_type_payment');
-            $table->date('billing_date');
-            $table->double('total_billing', 15, 8);
-            $table->double('id_tax', 15, 8);
-            $table->bigInteger('id_status');
+            $table->bigInteger('id_article');
+            $table->bigInteger('quantity');
+            $table->bigInteger('id_bill');
             $table->rememberToken();
             $table->timestamps();
-
-           
         });
     }
 
