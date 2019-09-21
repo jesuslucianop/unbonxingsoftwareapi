@@ -19,7 +19,7 @@ class CreateReturnTable extends Migration
             $table->bigInteger('id_article');
           
             $table->string('reason');
-            $table->date('date_Return');
+            $table->date('create_at');
             $table->bigInteger('id_status');
             $table->rememberToken();
             $table->timestamps();
