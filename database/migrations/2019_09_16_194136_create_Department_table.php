@@ -16,12 +16,15 @@ class CreateDepartmentTable extends Migration
         Schema::create('departament', function (Blueprint $table) {
             $table->increments('id');
             $table->string('departament');
-            $table->bigInteger('code_deparment');
-            $table->bigInteger('id_status');
+            $table->integer('id_deparment')->unsigned();
+            $table->integer('id_status')->unsigned();
             $table->rememberToken();
             $table->timestamps();
 
-           
+          
+               
+    
+    
         });
     }
 

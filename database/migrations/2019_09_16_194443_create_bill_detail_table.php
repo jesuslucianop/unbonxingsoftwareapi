@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Createbill_detailTable extends Migration
+class CreateBillDetailTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class Createbill_detailTable extends Migration
      */
     public function up()
     {
-        Schema::create('bill_detail', function (Blueprint $table) {
+        Schema::create('billdetail', function (Blueprint $table) {
             $table->increments('id');
-            $table->bigInteger('id_article');
-            $table->bigInteger('quantity');
-            $table->bigInteger('id_bill');
+            $table->integer('id_article')->unsigned();
+            $table->integer('quantity')->unsigned();
+            $table->integer('id_invoice')->unsigned();
             $table->rememberToken();
             $table->timestamps();
+
+          
         });
     }
 

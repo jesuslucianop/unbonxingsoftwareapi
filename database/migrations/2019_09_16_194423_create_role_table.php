@@ -17,9 +17,11 @@ class CreateRoleTable extends Migration
             $table->increments('id');
             $table->string('role');
             $table->string('description');
-            $table->bigInteger('id_status');
+            $table->integer('id_status')->unsigned();
             $table->rememberToken();
             $table->timestamps();
+
+
         });
     }
 

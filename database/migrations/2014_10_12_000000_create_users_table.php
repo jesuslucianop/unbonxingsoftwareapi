@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class Createuserstable extends Migration
 {
     /**
      * Run the migrations.
@@ -23,18 +23,16 @@ class CreateUsersTable extends Migration
             $table->text('address');
             $table->string('phone');
             $table->string('identification_card');
-            $table->bigInteger('code_employee');
-            $table->unsignedInteger('id_rol');
-            $table->bigInteger('id_status');
+            $table->integer('code_employee');
+            $table->integer('id_role')->unsigned();
+            $table->integer('id_status')->unsigned();
             $table->date('create_at');
-            $table->bigInteger('create_user');
+            $table->integer('create_user');
             $table->date('edit_at');
-            $table->bigInteger('edit_user');
+            $table->integer('edit_user');
             $table->rememberToken();
             $table->timestamps();
-           
-    $table->foreign('id_rol')->references('id')->on('role');
-    // ...
+   
 });
 
    

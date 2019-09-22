@@ -15,12 +15,14 @@ class CreateInvoiceDetailTable extends Migration
     {
         Schema::create('invoice_detail', function (Blueprint $table) {
             $table->increments('id');
-            $table->bigInteger('id_article');
-            $table->bigInteger('quantity');
+            $table->integer('id_article')->unsigned();
+            $table->integer('quantity')->unsigned();
             $table->double('total', 15, 8);
-            $table->bigInteger('id_bill');
+            $table->integer('id_invoice')->unsigned();
             $table->rememberToken();
             $table->timestamps();
+            
+       
         });
     }
 
