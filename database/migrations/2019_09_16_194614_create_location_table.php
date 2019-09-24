@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCountryTable extends Migration
+class CreateLocationTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,14 @@ class CreateCountryTable extends Migration
      */
     public function up()
     {
-        Schema::create('country', function (Blueprint $table) {
+        Schema::create('location', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('country');
-            $table->string('province_state');
+            $table->string('location');
+            $table->integer('id_location')->unsigned();
             $table->rememberToken();
             $table->timestamps();
+
+           
         });
     }
 

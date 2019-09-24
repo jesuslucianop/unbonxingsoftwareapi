@@ -20,14 +20,17 @@ class CreateArticleTable extends Migration
             $table->string('image');
             $table->double('cost', 15, 8);
             $table->double('sale', 15, 8);
-            $table->bigInteger('quantity');
-            $table->bigInteger('id_provider');
-            $table->bigInteger('id_category');
+            $table->integer('stock')->unsigned();
+            $table->integer('id_provider')->unsigned();
+            $table->integer('id_departament')->unsigned();
+            $table->integer('id_status')->unsigned();
             $table->date('create_at');
+            $table->date('edit_at');
+            $table->integer('edit_user')->unsigned();
             $table->rememberToken();
             $table->timestamps();
 
-           
+    
         });
     }
 

@@ -16,13 +16,14 @@ class CreateReturnTable extends Migration
         Schema::create('return', function (Blueprint $table) {
             $table->increments('id');
             $table->string('return_type');
-            $table->bigInteger('id_article');
+            $table->integer('id_article')->unsigned();
           
             $table->string('reason');
             $table->date('create_at');
-            $table->bigInteger('id_status');
+            $table->integer('id_status')->unsigned();
             $table->rememberToken();
             $table->timestamps();
+
         });
     }
 

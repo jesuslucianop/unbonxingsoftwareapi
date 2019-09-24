@@ -17,9 +17,11 @@ class CreateCurrencyTable extends Migration
             $table->increments('id');
             $table->string('currency');
             $table->string('acronym');
-            $table->bigInteger('id_status');
+            $table->integer('id_status')->unsigned();
             $table->rememberToken();
             $table->timestamps();
+            
+        
         });
     }
 
