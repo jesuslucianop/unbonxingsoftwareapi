@@ -13,7 +13,19 @@ class CreateDepartmentTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('departament', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('departament');
+            $table->integer('id_deparment')->unsigned();
+            $table->integer('id_status')->unsigned();
+            $table->rememberToken();
+            $table->timestamps();
+
+          
+               
+    
+    
+        });
     }
 
     /**

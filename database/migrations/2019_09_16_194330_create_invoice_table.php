@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePurchaseTable extends Migration
+
+class CreateInvoiceTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +14,19 @@ class CreatePurchaseTable extends Migration
      */
     public function up()
     {
-        Schema::create('purcharse', function (Blueprint $table) {
+        Schema::create('invoice', function(Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_article')->unsigned();
-            $table->date('create_at');
-            $table->integer('id_status')->unsigned();
+            $table->string('billing_number');
             $table->integer('id_user')->unsigned();
-            $table->string('mount');
+            $table->integer('id_type_payment')->unsigned();
+            $table->date('create_at');
+            $table->double('total_invoice', 15, 8);
             $table->integer('id_tax')->unsigned();
+            $table->integer('id_status')->unsigned();
+            $table->integer('id_client')->unsigned();
             $table->rememberToken();
             $table->timestamps();
-
+ 
         });
     }
 
@@ -34,6 +37,6 @@ class CreatePurchaseTable extends Migration
      */
     public function down()
     {
-        //
+        
     }
 }

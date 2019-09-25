@@ -13,7 +13,13 @@ class CreateTaxTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tax', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->double('quantity', 15, 8);
+            $table->rememberToken();
+            $table->timestamps();
+        });
     }
 
     /**

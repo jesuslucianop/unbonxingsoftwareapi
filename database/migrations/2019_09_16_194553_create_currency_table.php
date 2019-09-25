@@ -13,7 +13,16 @@ class CreateCurrencyTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('currency', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('currency');
+            $table->string('acronym');
+            $table->integer('id_status')->unsigned();
+            $table->rememberToken();
+            $table->timestamps();
+            
+        
+        });
     }
 
     /**
