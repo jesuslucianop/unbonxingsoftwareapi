@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use app\Models\Provider;
+use App\Models\Provider;
 use Illuminate\Http\Request;
 use App\Http\Requests\Providercreaterequest;
 class ProviderController extends Controller
@@ -9,7 +9,9 @@ class ProviderController extends Controller
     //Method for create the providers
    public function CreateProvider(Providercreaterequest $request )
    {
-    return $request->all();
+    $data  = $request->all();
+    $provider= Provider::create($data);
+    return $provider;
        
    }
 }
