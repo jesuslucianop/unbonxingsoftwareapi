@@ -6,6 +6,7 @@ use App\Providers;
 
 use App\Http\Requests\Providercreaterequest;
 use App\Http\Requests\Providerupdatebyidrequest;
+use App\Http\Requests\Providergetbyidrequest;
 class ProviderController extends Controller
 {
     //Method for create the providers
@@ -22,7 +23,14 @@ class ProviderController extends Controller
     $providers  =  Providers::all();
         return $providers->toJson();
    }
-   //Public function Getbyid(){}
+  
+   Public function Getbyid(Providergetbyidrequest $request)
+   {
+
+    $id = $request->id;
+    $Provider = Providers::find($request->id);
+    return !$Provider ? json_encode("Provider not found ") : json_encode($Provider);
+   }
        Public function Updateprovider(Providerupdatebyidrequest $request)
        {
         $id = $request->id;

@@ -15,3 +15,4 @@ use Illuminate\Http\Request;
 Route::post('provider','ProviderController@CreateProvider')->name('CreateProvider');
 Route::get('provider','ProviderController@Getallprovider')->name('GetProvider');
 Route::put('provider','ProviderController@Updateprovider')->name('Updateprovider');
+Route::get('provider','ProviderController@Getbyid')->name('Getbyid');
