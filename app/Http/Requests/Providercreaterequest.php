@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 
 use Illuminate\Contracts\Validation\Validator;
-
+//this code show the message of request
 use Illuminate\Http\Exceptions\HttpResponseException;
 
 
@@ -13,7 +13,7 @@ use Illuminate\Http\Exceptions\HttpResponseException;
 
 class Providercreaterequest extends FormRequest
 {
-
+//this code show the message of request
     protected function failedValidation(Validator $validator)
 {
     throw new HttpResponseException(response()->json($validator->errors(), 422));
@@ -43,7 +43,7 @@ class Providercreaterequest extends FormRequest
             'email'=>'required',
             'extension'=>'required',
             'zipcode'=>'required',
-            'identification_rnc'=>'required|integer|',
+            'identification_rnc'=>'required',
             'id_location'=>'required|integer|',
             'notification'=>'required',
             'id_currency'=>'required|integer|',
