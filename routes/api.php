@@ -12,5 +12,5 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
 Route::post('provider','ProviderController@CreateProvider')->name('CreateProvider');
+Route::get('provider','ProviderController@Getallprovider')->name('GetProvider');

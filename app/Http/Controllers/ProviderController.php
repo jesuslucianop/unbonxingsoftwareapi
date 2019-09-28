@@ -16,7 +16,11 @@ class ProviderController extends Controller
        
    }
 
-   //Public function Getallprovider(){}
+   Public function Getallprovider()
+   {
+    $providers  =  Providers::all();
+        return $providers->toJson();
+   }
    //Public function Getbyid(){}
        //Public function Updateprovider(){}
            //Public function deleteprovider(){}
