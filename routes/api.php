@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('provider','ProviderController@CreateProvider')->name('CreateProvider');
+Route::get('provider','ProviderController@Getallprovider')->name('GetProvider');
+Route::put('provider','ProviderController@Updateprovider')->name('Updateprovider');
+Route::get('provider','ProviderController@Getbyid')->name('Getbyid');

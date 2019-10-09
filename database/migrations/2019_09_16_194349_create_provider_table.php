@@ -22,10 +22,12 @@ class CreateproviderTable extends Migration
             $table->string('email')->unique();
             $table->string('extension');
             $table->string('zipcode');
+            $table->integer('identification_rnc');
             $table->integer('id_location')->unsigned();
             $table->string('notification');
             $table->integer('id_currency')->unsigned();
             $table->integer('id_status')->unsigned();
+            $table->string('note');
             $table->rememberToken();
             $table->timestamps();
 
