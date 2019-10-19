@@ -46,4 +46,17 @@ public function CreateArticle(Request $request )
          return $request->all();
       }
    }
+   public function Getallarticle()
+   {
+      $Article  =  Article::all();
+      return $Article->toJson();
+   }
+
+   public function Getbyidarticle(Request $request)
+   {
+
+      $id = $request->id;
+      $Article = Article::find($request->id);
+      return !$Article ? json_encode("Article not found ") : json_encode($Article);
+   }
 }
