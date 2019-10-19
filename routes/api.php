@@ -16,3 +16,6 @@ Route::post('provider','ProviderController@CreateProvider')->name('CreateProvide
 Route::get('provider','ProviderController@Getallprovider')->name('GetProvider');
 Route::put('provider','ProviderController@Updateprovider')->name('Updateprovider');
 Route::get('provider','ProviderController@Getbyid')->name('Getbyid');
+
+//Article
+Route::post('provider', 'ArticleController@CreateArticle')->name('CreateArticle');

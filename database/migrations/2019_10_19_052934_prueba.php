@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArticleTable extends Migration
+class Prueba extends Migration
 {
 
     /**
@@ -27,8 +27,6 @@ class CreateArticleTable extends Migration
             $table->integer('id_status')->unsigned();
             $table->integer('edit_user')->unsigned();
             $table->timestamps();
-
-    
         });
     }
 
