@@ -6,6 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateArticleTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -24,10 +25,7 @@ class CreateArticleTable extends Migration
             $table->integer('id_provider')->unsigned();
             $table->integer('id_departament')->unsigned();
             $table->integer('id_status')->unsigned();
-            $table->date('create_at');
-            $table->date('edit_at');
             $table->integer('edit_user')->unsigned();
-            $table->rememberToken();
             $table->timestamps();
 
     
